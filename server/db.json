@@ -1,34 +1,28 @@
 {
   "students": [
     {
-      "name": "Joao ",
-      "surname": "Guimaraes",
-      "register": "AAAE",
-      "id": "0bdf3b7b-44ef-458a-b2ff-0b46ba8b5fd2"
+      "name": "João",
+      "surname": "Guimarães",
+      "register": "1111",
+      "id": "e4c0e413-c018-43da-8aa9-9186f8df2eed"
     },
     {
-      "id": "46f15cb2-e38d-433e-8d7c-6dc6d7491d63",
       "name": "Emerson",
-      "surname": "Lopes",
-      "register": "AAAD"
+      "surname": "C",
+      "register": "1112",
+      "id": "3e1292e1-d836-4024-a41f-3fd4676bb530"
     },
     {
-      "name": "Laura ",
-      "surname": "Clochobar",
-      "register": "AAAC",
-      "id": "41440c49-095a-4e32-926e-9e0d077532cd"
+      "name": "Laura",
+      "surname": "C",
+      "register": "1113",
+      "id": "a4a52c66-fffc-4c81-ad10-4e36b21ffe5f"
     },
     {
       "name": "Ale",
-      "surname": "Test",
-      "register": "abcd",
-      "id": "7de0ca99-b941-49d8-ac05-9b8a20adf664"
-    },
-    {
-      "name": "Final Edit",
-      "surname": "Test2",
-      "register": "11112",
-      "id": "1097b9d3-5ac2-4ecb-a65d-b83aa653e956"
+      "surname": "C",
+      "register": "1114",
+      "id": "98666975-116e-4714-aa88-8ba94ae3695a"
     }
   ]
 }

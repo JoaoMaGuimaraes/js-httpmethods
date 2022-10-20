@@ -34,25 +34,8 @@ main {
   margin: 0 auto;
 }
 
-.updform {
-  background-color: lightgrey;
-  width: 100%;
-  padding: 16px;
-}
-
-.updform > form {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  margin-top: 32px;
-  width: 400px;
-  margin: 0 auto;
-}
-
 .students {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  margin-top: 32px;
 }
 
 .students li {
@@ -78,19 +61,17 @@ main {
   flex-grow: 1;
 }
 
-.actbuttons {
+.btn {
+  width: 80px;
+  height: auto;
+  border: 1px solid black;
+  cursor: pointer;
   display: flex;
-  justify-content: flex-end;
-}
-
-.EditBtn{
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: 0px;
-  width: 50px;
+  align-items: center;
 }
 
-.DeleteBtn{
-  width: 50px;
+.btn:hover {
+  color: aliceblue;
+  background-color: black;
 }

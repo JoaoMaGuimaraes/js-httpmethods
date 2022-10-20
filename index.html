@@ -4,25 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js-httpmethods</title>
+    <title>JS HTTP METHODS</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
       <section class="form">
         <form method="post" id="dataForm">
-          <input name="id" type="text" placeholder="id" disabled />
-          <input name="name" type="text" placeholder="name" />
-          <input name="surname" type="text" placeholder="surname" />
-          <input name="register" type="text" placeholder="register" />
-          <button class="submitbtn" value="Send">SEND</button>
+          <input name="name" type="text" placeholder="name" id="name" />
+          <input
+            name="surname"
+            type="text"
+            placeholder="surname"
+            id="surname"
+          />
+          <input
+            name="register"
+            type="text"
+            placeholder="register"
+            id="register"
+          />
+          <!-- <input type="submit" value="Send" /> -->
+          <button id="sendBtn">Send</button>
         </form>
       </section>
       <section class="students">
         <ul class="students__list">
+          <!--           <li>
+            <div class="student">
+              <p><span class="bold">ID:</span>1</p>
+              <p><span class="bold">Name:</span></p>
+              <p><span class="bold">Surname:</span></p>
+              <p><span class="bold">Register:</span></p>
+            </div>
+          </li> -->
         </ul>
       </section>
     </main>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/requests.js"></script>
   </body>
 </html>
