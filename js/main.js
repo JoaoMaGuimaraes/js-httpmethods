@@ -14,7 +14,6 @@ function uuidv4() {
 const studentUrl = 'http://localhost:3000/students';
 const ul = document.querySelector(".students__list")
 const form = document.getElementById('dataForm');
-const updForm = document.getElementById('upddataForm');
 const stud = document.querySelector(".student");
 const sbmBtn = document.querySelector(".submitbtn");
 const editBtn = document.querySelector(".edittbtn");
@@ -56,33 +55,6 @@ const printList = async (element, items) => {
 	}
 }
 
-/**
- * Get data from the Form and send them to the server
- */
-form.addEventListener('submit', (e) => {
-	e.preventDefault();
-	// Creates a new object that contains all the data from the form
-	const prePayload = new FormData(form);
-	prePayload.append("id", uuidv4());
-	const payload = new URLSearchParams(prePayload);
-
-	fetch(studentUrl, {
-		method: 'POST',
-		body: payload
-	})
-		.then(res => {
-			// if the post has not successful throw and error
-			if (!res.ok) {
-				throw new Error("There are some problems with your http post request");
-			}
-			// if the post is successful the page will be updated
-			printList(ul, getData(studentUrl));
-			return res.json();
-		})
-		// Reset form after submitting
-		document.getElementById('dataForm').reset(); 
-})
-
 ul.addEventListener('click', (e) => {
 	let delButton = e.target.id == 'delete';
 	let editButton = e.target.id == 'edit';
@@ -100,24 +72,24 @@ ul.addEventListener('click', (e) => {
 		.then(() => location.reload())
 	}
 	if(editButton){
-		updForm.id.value = id;
-		updForm.name.value = name;
-		updForm.surname.value = surname;
-		updForm.register.value = register;
+		sbmBtn.textContent = 'Edit';
+		form.id.value = id;
+		form.name.value = name;
+		form.surname.value = surname;
+		form.register.value = register;
 		let updPayload = {id, name, surname, register}
 		console.log(updPayload)
 	}
 });
 
 
-updForm.addEventListener('submit',(e) =>{
+form.addEventListener('submit',(e) =>{
 	e.preventDefault();
-	const prePayload = new FormData(updForm);
-	prePayload.append("id", updForm.id.value);
+	const prePayload = new FormData(form);
+	sbmBtn.textContent === "SEND" && prePayload.append("id", uuidv4());
 	const payload = new URLSearchParams(prePayload);
-	console.log(updForm.id.value);
-	fetch(studentUrl+`/${updForm.id.value}`, {
-		method: 'PUT',
+	fetch(sbmBtn.textContent === "SEND"	? studentUrl: `${studentUrl}/${form.id.value}`, {
+		method: sbmBtn.textContent === "SEND" ? "POST" : "PUT",
 		body: payload
 	})
 		.then(res => {
@@ -136,3 +108,6 @@ updForm.addEventListener('submit',(e) =>{
  * On page load all the data are retrieved
  */
 window.onload = printList(ul, getData(studentUrl));
+
+
+//TO DO: IMPLEMENT EDIT WITH EDITABLE CONTENT LIKE: https://www.w3schools.com/jsref/tryit.asp?filename=try_dom_body_contenteditable

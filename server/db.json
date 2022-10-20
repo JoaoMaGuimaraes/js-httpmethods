@@ -1,10 +1,10 @@
 {
   "students": [
     {
-      "id": "0bdf3b7b-44ef-458a-b2ff-0b46ba8b5fd2",
-      "name": "Joao",
+      "name": "Joao ",
       "surname": "Guimaraes",
-      "register": "AAAE"
+      "register": "AAAE",
+      "id": "0bdf3b7b-44ef-458a-b2ff-0b46ba8b5fd2"
     },
     {
       "id": "46f15cb2-e38d-433e-8d7c-6dc6d7491d63",
@@ -25,13 +25,10 @@
       "id": "7de0ca99-b941-49d8-ac05-9b8a20adf664"
     },
     {
-      "id": "f28a19dd-c021-4467-b1c7-a325641a1b0f"
-    },
-    {
-      "name": "a",
-      "surname": "pp",
-      "register": "pp",
-      "id": "8e0bd9e5-d5a3-4f5e-a5ae-a519853c3c95"
+      "name": "Final Edit",
+      "surname": "Test2",
+      "register": "11112",
+      "id": "1097b9d3-5ac2-4ecb-a65d-b83aa653e956"
     }
   ]
 }
